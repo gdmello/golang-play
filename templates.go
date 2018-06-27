@@ -26,7 +26,7 @@ func main() {
 	var b bytes.Buffer
 	err := t.Execute(&b, vars)
 	if err != nil {
-			panic(err)
+		panic(err)
 	}
 	print(b.String())
 }
