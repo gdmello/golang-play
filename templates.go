@@ -13,10 +13,10 @@ Based on http://technosophos.com/2016/03/29/go-quickly-50-template-functions-fro
 
 func main() {
 	// The template
-	tpl := "Hello, {{.Name}}"
+	tpl := " Heavenly {{.Name}} image: {{regexSplit \":\" .Iag -1 | last }}"
 	
 	// The values to pass to the template
-	vars := map[string]string{"Name": "World"}
+	vars := map[string]string{"Name": "Home", "Iag": "registry.points.com/prod/platform_core:2018-23-12"}
 	
 	// Compile the template
 	// t := template.Must(template.New("example").Parse(tpl))
