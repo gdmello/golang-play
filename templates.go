@@ -16,10 +16,9 @@ func main() {
 	tpl := " Heavenly {{.Name}} image: {{regexSplit \":\" .Iag -1 | last }}"
 	
 	// The values to pass to the template
-	vars := map[string]string{"Name": "Home", "Iag": "registry.points.com/prod/platform_core:2018-23-12"}
+	vars := map[string]string{"Name": "Home", "Iag": "registry.quobyte.com/prod/core:2018-23-12"}
 	
 	// Compile the template
-	// t := template.Must(template.New("example").Parse(tpl))
 	t := template.Must(template.New("too").Funcs(sprig.FuncMap()).Parse(tpl))
 
 	// Run the template, copying the output to the buffer.
